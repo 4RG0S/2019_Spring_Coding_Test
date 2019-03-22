@@ -1,6 +1,7 @@
 # 2019_Spring_Coding_Test
 
 [SW Expert Academy](https://www.swexpertacademy.com/) 사이트에서 문제 풀이를 진행한다.
+[매일 프로그래밍](https://mailprogramming.com/) 사이트에서 문제 풀이를 진행한다.
 
 1. 매 주 2문제 푸는 것을 목표로 한다.
 2. 매 주 한 번씩 모여 문제 풀이를 공유 및 스터디를 진행한다.(매 주 수요일 16:00~)
