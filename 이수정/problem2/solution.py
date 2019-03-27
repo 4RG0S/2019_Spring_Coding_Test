@@ -1,7 +1,5 @@
 
 if __name__ == '__main__':
-    sum = 0             # 전망 좋은 아파트 세대 수
-
     for n in range(10):
         array = [0*100 for j in range(100)]
         number = input().strip()
