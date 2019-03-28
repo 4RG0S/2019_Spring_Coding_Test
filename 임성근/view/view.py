@@ -1,6 +1,6 @@
 def solution():
-    f = open('input1.txt', 'r')
-    g = open('output1.txt', 'w')
+    f = open('input.txt', 'r')
+    g = open('output.txt', 'w')
     j = 1
     while True:
         index = f.readline()
