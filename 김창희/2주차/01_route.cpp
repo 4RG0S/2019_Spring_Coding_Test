@@ -15,7 +15,6 @@ int main(){
 
 		int route1[100] = {0, };		// 순서쌍 배열 1
 		int route2[100] = {0, };		// 순서쌍 배열 2
-		//bool visit[100] = {false, };	// 정점 방문 여부
 
 		scanf("%d %d", &test_number, &number_of_order_pair);
 
@@ -35,18 +34,9 @@ int main(){
 		}
 
 
-		
-		//	visit[0] = true;		// 정점 0에서부터 추적
-		
 		// dynamic도 가능??	
-		if(route1[0] != 0){									// 첫번째 경로가 존재하는 경우
-			forward(route1, route2, route1[0], find);
-		}
+		forward(route1, route2, 0, find);				// 출발점에서부터 탐색 시작
 
-		if(route2[0] != 0){									// 두번째 경로가 존재하는 경우
-			forward(route1, route2, route2[0], find);
-		}
-			
 		printf("#%d %d\n", test_number, find);
 		}
 
@@ -55,23 +45,23 @@ int main(){
 
 
 
-void forward(const int * route1, const int * route2, int dest, bool& find){
-	if(find == true){
+void forward(const int * route1, const int * route2, int vertex, bool& find){
+	if(find == true){				// 시간 절약 가능?
 		return ;
 	}
 
-	if(dest == 99){				// 목적지 까지의 길이 존재
+	if(vertex == 99){				// 목적지 까지의 길이 존재
 		find = true;
 		return;
 	}
 
 
-	if(route1[dest] != 0){									// 첫 번째 경로가 존재하는 경우
-		forward(route1, route2, route1[dest], find);
+	if(route1[vertex] != 0){									// 첫 번째 경로가 존재하는 경우
+		forward(route1, route2, route1[vertex], find);
 	}
 
-	if(route2[dest] != 0){									// 두 번째 경로가 존재하는 경우
-		forward(route1, route2, route2[dest], find);
+	if(route2[vertex] != 0){									// 두 번째 경로가 존재하는 경우
+		forward(route1, route2, route2[vertex], find);
 	}
 
 }
