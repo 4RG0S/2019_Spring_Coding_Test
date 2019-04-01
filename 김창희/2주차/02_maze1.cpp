@@ -83,6 +83,10 @@ int main(){
 void route(int (*maze)[16], Status (*maze_state)[16], int row, int col , bool& find){
 	maze_state[row][col] = Visited;
 
+	if(find == true){
+		return;
+	}
+
 	if(maze[row][col] == 3){
 		find = true;
 		return;
