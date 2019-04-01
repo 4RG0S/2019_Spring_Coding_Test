@@ -83,7 +83,7 @@ int main(){
 void route(int (*maze)[16], Status (*maze_state)[16], int row, int col , bool& find){
 	maze_state[row][col] = Visited;
 
-	if(find == true){
+	if(find == true){					// 실행시간 절약될까?
 		return;
 	}
 
