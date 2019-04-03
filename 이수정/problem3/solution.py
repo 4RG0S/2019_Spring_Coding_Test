@@ -10,9 +10,11 @@ if __name__ == '__main__':
 
         tmp = input().strip()
 
+        # n = 테스트케이스 번호 / m = Edge 개수
         n = tmp.split(' ')[0]
         m = tmp.split(' ')[1]
 
+        # Edge 입력받음
         edge = input().strip()
         edge = edge.split()
         print(edge)
@@ -28,7 +30,8 @@ if __name__ == '__main__':
                 path2[edge[j]] = edge[j+1]
 
         queue.append(0)
-
+         
+        # 큐가 빌 때까지 순환
         while True:
             if len(queue) == 0:
                 print("#"+str(n)+" 0")
@@ -40,6 +43,7 @@ if __name__ == '__main__':
                 print("#"+str(n)+" 1")
                 break
 
+            # 두 가지 경로가 있을 시, 이후에 입력받은? 경로를 먼저 집어 넣음. 
             if path2[v] != 0:
                 queue.append(path2[v])
                 path2[v] = 0
