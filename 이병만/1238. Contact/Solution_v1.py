@@ -1,5 +1,4 @@
 from collections import deque
-import time
 
 
 # BFS
@@ -13,7 +12,6 @@ def solution(arr, visit, start):
         n = queue.popleft()
         max_result.append(n)
 
-        # find adjacent values
         for index in range(len(arr)):
             if arr[index][0] == n[0] and not visit[arr[index][1]]:
                 # putin queue
@@ -34,20 +32,11 @@ if __name__ == '__main__':
         # contact data
         contact = list(map(int, input().strip().split()))
 
-        start_time = time.time()
-
-        # data = [[0] * 100 for k in range(100)]
         data = []
         visited = [False] * (max(contact) + 1)
 
         # data setting
         for j in range(0, len(contact), 2):
             data.append([contact[j], contact[j+1]])
-            # data[contact[j] - 1][contact[j+1] - 1] = contact[j+1]
 
-        # print(solution(data, visited, start_point))
         print("#" + str(i + 1) + " " + str(solution(data, visited, start_point)))
-
-        print("start_time", start_time)  # 출력해보면, 시간형식이 사람이 읽기 힘든 일련번호형식입니다.
-        print("--- %s seconds ---" % (time.time() - start_time))
-
