@@ -40,10 +40,10 @@ def main():
 		while len(queue) > 0:
 			temp_vertex = queue.popleft()
 				
-			if temp_vertex.hop > maxhop:
+			if temp_vertex.hop > maxhop:									# 마지막에 연락받은 경우 결과 갱신
 				maxhop = temp_vertex.hop
 				result = temp_vertex.number
-			elif temp_vertex.hop == maxhop and temp_vertex.number > result:
+			elif temp_vertex.hop == maxhop and temp_vertex.number > result:	# 마지막으로 연락받은 인원이 다수일 경우 가장 큰 값으로 갱신
 				result = temp_vertex.number
 			
 			if temp_vertex.number not in graph:
