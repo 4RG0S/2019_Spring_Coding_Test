@@ -8,7 +8,7 @@ class Vertex:
 
 
 def main():
-	with open('input.txt', 'r') as data_file:
+	with open('contact_input.txt', 'r') as data_file:
 		for testcase_number in range(1, 11):
 			graph = dict()
 			visited = [False for i in range(100)]
