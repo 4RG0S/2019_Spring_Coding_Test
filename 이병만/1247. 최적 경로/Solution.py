@@ -36,8 +36,6 @@ def create_permutation(arr1, arr2, arr3):
 
         if distance < min_distance:
             min_distance = distance
-        else:
-            pass
 
     return min_distance
 
