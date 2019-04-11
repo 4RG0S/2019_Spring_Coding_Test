@@ -1,4 +1,5 @@
 import itertools
+import sys
 
 
 def data_setting():
@@ -23,7 +24,7 @@ def data_setting():
 
 
 def create_permutation(arr1, arr2, arr3):
-    min_distance = float('inf')
+    min_distance = sys.maxsize
     for i in itertools.permutations(arr2):
         # At the beginning and end of each route, the coord of the company and the house are placed behind it.
         path = [arr1, *list(i), arr3]
@@ -33,7 +34,10 @@ def create_permutation(arr1, arr2, arr3):
         for idx in range(0, len(path) - 1):
             distance += abs(path[idx][0] - path[idx + 1][0]) + abs(path[idx][1] - path[idx + 1][1])
 
-        min_distance = distance if distance < min_distance else min_distance
+        if distance < min_distance:
+            min_distance = distance
+        else:
+            pass
 
     return min_distance
 
