@@ -1,5 +1,6 @@
 f = open("input.txt", 'r')
-
+# 이 방식으로 하면.. 모두 검사해야 되는 단점이있음
+# 만약 스택을 이용해서 괄호짝짓기가 실패를 했을때 바로 뽑으면 더 효율적임
 def count_all(list):
     global count_1, count_2, count_3, count_4
     for i in range(0, len(list)):
