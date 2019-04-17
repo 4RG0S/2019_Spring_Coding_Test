@@ -13,31 +13,32 @@ using namespace std;
 void rtrim(string& str, const string& delimiters = " \f\n\r\t\v");
 void ltrim(string& str, const string& delimiters = " \f\n\r\t\v");
 void trim(string& str, const string& delimiters = " \f\n\r\t\v");
-bool bracket_valid_test(stack<char>& stack, char bracket);		// Ã€Ã¼Â´ÃÂµÃˆ (Â´ÃÂ´Ã‚) bracketÃ€ÃŒ Ã‚Â¦ÃÃ¾Â±Ã¢Â¿Â¡ Ã€Â¯ÃˆÂ¿Ã‡Ã‘ÃÃ¶ Â°Ã‹Â»Ã§
+bool bracket_valid_test(stack<char>& stack, char bracket);		// Àü´ŞµÈ (´İ´Â) bracketÀÌ Â¦Áş±â¿¡ À¯È¿ÇÑÁö °Ë»ç
 
 
 
 int main() {
-	
-	string temp;					// Â¹Â®Ã€ÃšÂ¿Â­ Ã€Ã”Â·Ã‚Â¹ÃÃ€Â» Â¶Â§ Ã€ÃŒÂ¿Ã«ÂµÃ‡Â´Ã‚ temp ÂºÂ¯Â¼Ã¶
-	char* input_data;				// string Ã…Â¸Ã€Ã”Ã€Â¸Â·Ã Ã€Ã”Â·Ã‚Â¹ÃÃ€Âº Â°Ã½ÃˆÂ£Â¸Â¦ Ã€ÃºÃ€Ã¥Ã‡Ã’ char Ã†Ã·Ã€ÃÃ…Ã(Â¹Ã¨Â¿Â­)
+
+
+	string temp;					// ¹®ÀÚ¿­ ÀÔ·Â¹ŞÀ» ¶§ ÀÌ¿ëµÇ´Â temp º¯¼ö
+	char* input_data;				// string Å¸ÀÔÀ¸·Î ÀÔ·Â¹ŞÀº °ıÈ£¸¦ ÀúÀåÇÒ char Æ÷ÀÎÅÍ(¹è¿­)
 	for (int testcase_num = 1; testcase_num <= 10; testcase_num++) {
-		bool valid = true;									// Ã€Â¯ÃˆÂ¿Â¼Âº Â¿Â©ÂºÃ
-	
-		cin >> temp;
+		bool valid = true;									// À¯È¿¼º ¿©ºÎ
+
+		getline(cin, temp);
 		trim(temp);
-		int bracket_length = atoi(temp.c_str());		// Â°Ã½ÃˆÂ£Ã€Ã‡ Â±Ã¦Ã€ÃŒ
-		
+		int bracket_length = atoi(temp.c_str());		// °ıÈ£ÀÇ ±æÀÌ
+
 		input_data = new char[bracket_length + 1];
-		memset(input_data, 0, bracket_length + 1);	
-		
-		cin >> temp;
+		memset(input_data, 0, bracket_length + 1);
+
+		getline(cin, temp);
 		strcpy(input_data, temp.c_str());
-		
-		stack<char> stack;			// Â°Ã½ÃˆÂ£ Ã‚Â¦ÃÃ¾Â±Ã¢Â¿Â¡ Â»Ã§Â¿Ã«Ã‡Ã’ stack
+
+		stack<char> stack;			// °ıÈ£ Â¦Áş±â¿¡ »ç¿ëÇÒ stack
 		for (int i = 0; i < bracket_length; i++) {
 			char bracket = input_data[i];
-		
+
 			switch (bracket) {
 			case '(':
 			case '[':
@@ -45,7 +46,7 @@ int main() {
 			case '<':
 				stack.push(bracket);
 				break;
-				
+
 			case ')':
 			case ']':
 			case '}':
@@ -61,25 +62,24 @@ int main() {
 				break;
 			}
 		}
-		
+
 		cout << "#" << testcase_num << " " << valid << endl;
-		
+
 		delete input_data;
 	}
 
-	
 	return 0;
 }
 
 
 bool bracket_valid_test(stack<char>& stack, char bracket) {
-	if (stack.empty()) {				// Â¿Â©Â´Ã‚ Â°Ã½ÃˆÂ£Â°Â¡ Â½ÂºÃ…ÃƒÂ¿Â¡ Â¾Ã¸Â´Ã‚ÂµÂ¥, Â´ÃÂ´Ã‚ Â°Ã½ÃˆÂ£Â°Â¡ ÂµÃ®Ã€Ã¥Ã‡Ã’ Â°Ã¦Â¿Ã¬
+	if (stack.empty()) {				// ¿©´Â °ıÈ£°¡ ½ºÅÃ¿¡ ¾ø´Âµ¥, ´İ´Â °ıÈ£°¡ µîÀåÇÒ °æ¿ì
 		return false;
 	}
 
 	char poped_bracket = stack.top();
 	stack.pop();
-	
+
 	if (bracket == ')') {
 		if (poped_bracket == '(') {
 			return true;
@@ -88,7 +88,7 @@ bool bracket_valid_test(stack<char>& stack, char bracket) {
 			return false;
 		}
 	}
-	
+
 	if (bracket == ']') {
 		if (poped_bracket == '[') {
 			return true;
@@ -115,7 +115,7 @@ bool bracket_valid_test(stack<char>& stack, char bracket) {
 			return false;
 		}
 	}
-	
+
 	return false;
 }
 
