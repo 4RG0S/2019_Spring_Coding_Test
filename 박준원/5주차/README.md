@@ -1,6 +1,4 @@
-[SW Expert Academy 1233](<https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD&categoryId=AV141176AIwCFAYD&categoryType=CODE>). 
-
-Problem : 사칙연산 유효성 검사 **D4**
+(1233)사칙연산 유효성 검사
 
 Flow :
 
