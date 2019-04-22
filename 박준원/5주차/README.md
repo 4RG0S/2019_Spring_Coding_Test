@@ -1,7 +1,8 @@
-#1233
+[SW Expert Academy 1233](<https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD&categoryId=AV141176AIwCFAYD&categoryType=CODE>). 
 
-사칙연산 유효성 검사
+Problem : 사칙연산 유효성 검사 **D4**
 
+Flow :
 
 1. 한줄씩 읽으면서 리프인지 아닌지 확인
 2. 리프이면 정수인지 확인 --> 아니면 0을 반환
