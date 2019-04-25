@@ -1,0 +1,24 @@
+New Year Chaos
+
+[Input]
+the number of people in the queue
+final state of the queue
+
+[output]
+minimum number of bribes
+
+------------------------------------------------------------------
+
+1. There is a line
+
+2. One person has two times of bribe to move.
+
+------------------------------------------------------------------
+
+1. visit the queue from back
+
+2. match index and number
+
+3. If diff is over 2, it is too chaotic
+
+4. If there is number in 2, move back and count
