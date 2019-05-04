@@ -1,0 +1,16 @@
+Hash Tables: Ransom Note
+
+[input]
+The number of words in magazine and ransom note
+Words of magazine
+Words of note
+
+[output]
+If the note can be formed using the magazine, print 'Yes';otherwise, print 'No'
+
+-------------------------------------------------------------------------
+1. Make a dictionary
+2. add words in magazine to dictionary (key: word, value: count)
+3. count down about words of note in dictionary
+	3-1. If there is no word in dictionary, print No
+	3-2. If count is minus, print No
