@@ -6,7 +6,7 @@
 
 - 입사 지원 시 필요한 코딩 테스트를 준비하는 팀이다.
 - [SW Expert Academy](https://www.swexpertacademy.com/) 사이트에서 문제 풀이를 진행한다.
-- [Programmers.](<https://programmers.co.kr/>) 사이트에서 문제 풀이를 진행한다.
+- [Programmers](<https://programmers.co.kr/>) 사이트에서 문제 풀이를 진행한다.
 - 매주 2문제 푸는 것을 목표로 한다.
 
 ### 참가자
@@ -33,7 +33,8 @@
 
 ##### Programmers
 
-|        |                          Problem 1                           | Problem 2 |
-| :----: | :----------------------------------------------------------: | :-------: |
-| 6 week | [완주하지 못한 선수](<https://programmers.co.kr/learn/courses/30/lessons/42576>) |     X     |
+|        |                          Problem 1                           |                          Problem 2                           |
+| :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| 6 week | [완주하지 못한 선수](<https://programmers.co.kr/learn/courses/30/lessons/42576>) |                              X                               |
+| 7 week | [타겟 넘버](<https://programmers.co.kr/learn/courses/30/lessons/43165>) | [예산](<https://programmers.co.kr/learn/courses/30/lessons/43237>) |
 
