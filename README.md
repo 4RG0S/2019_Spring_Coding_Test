@@ -37,4 +37,5 @@
 | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | 6 week | [완주하지 못한 선수](<https://programmers.co.kr/learn/courses/30/lessons/42576>) |                              X                               |
 | 7 week | [타겟 넘버](<https://programmers.co.kr/learn/courses/30/lessons/43165>) | [예산](<https://programmers.co.kr/learn/courses/30/lessons/43237>) |
-
+| 8week  | [타겟 넘버](<https://programmers.co.kr/learn/courses/30/lessons/43165>) | [예산](<https://programmers.co.kr/learn/courses/30/lessons/43237>) |
+| 9week  | [전화번호 목록](<https://programmers.co.kr/learn/courses/30/lessons/42577>) | [더 맵게](<https://programmers.co.kr/learn/courses/30/lessons/42626>) |
